@@ -27,9 +27,9 @@ Credit card payment channel is not available in Android 4.1, 4.2, and 4.3. due t
 
 ### Android
 
-1. npm install molpay-mobile-xdk-reactnative-beta --save
+1) npm install https://github.com/MOLPay/molpay-mobile-xdk-reactnative-beta.git --save
 
-2. add the following import to `MainApplication.java` (`MainActivity.java` if RN < 0.33) of your application
+2) add the following import to `MainApplication.java` (`MainActivity.java` if RN < 0.33) of your application
 
 ```java
 import com.molpayxdk.MOLPayReact;
@@ -56,10 +56,9 @@ public class MainActivity extends ReactActivity {
         }
     }
     
-}
-```
+}```
 
-3. add the following code to add the package to `MainApplication.java`` (`MainActivity.java` if RN < 0.33)
+3) add the following code to add the package to `MainApplication.java`` (`MainActivity.java` if RN < 0.33)
 
 ```java
 import com.molpayxdk.MOLPayReactPackage;
@@ -72,7 +71,7 @@ protected List<ReactPackage> getPackages() {
     }
 ```
 
-4. add the following codes to your `android/setting.gradle`
+4) add the following codes to your `android/setting.gradle`
 
 > you might have multiple 3rd party libraries, make sure that you don't create multiple include.
 
@@ -81,22 +80,22 @@ include ':app', ':MOLPayXDK'
 project(':MOLPayXDK').projectDir = new File(rootProject.projectDir, '../node_modules/MOLPayXDK/android')
 ```
 
-5. edit `android/app/build.gradle` and add the following line inside `dependencies`
+5) edit `android/app/build.gradle` and add the following line inside `dependencies`
 
 ```
 compile project(':MOLPayXDK')
 ```
 
-6. run `react-native run-android` to see if everything is compilable.
+6) run `react-native run-android` to see if everything is compilable.
 
 if have any issue when run-android please make sure your `android/local.properties` already set sdk path
 
 ```
-ndk.dir=/Users/leow/Library/Android/sdk/ndk-bundle
-sdk.dir=/Users/leow/Library/Android/sdk
+ndk.dir=path/Android/sdk/ndk-bundle
+sdk.dir=path/Android/sdk
 ```
 
-7. (Optional) header include Close button in payment UI
+7) (Optional) header include Close button in payment UI
 change the following codes in your `android/app/src/main/res/values/styles.xml`
 ```
 <resources>
@@ -144,10 +143,11 @@ Parameter and meaning:
 3) MOLPay server offline.
 
 ## Prepare the Payment detail object
+
+```
 var paymentDetails = {
     // Mandatory String. A value more than '1.00'
     'mp_amount': '1.1',
-
     // Mandatory String. Values obtained from MOLPay
     'mp_username': '',
     'mp_password': '',
@@ -201,6 +201,7 @@ var paymentDetails = {
     // Optional, required a valid mp_channel value, this will skip the payment info page and go direct to the payment screen.
     'mp_express_mode': false
 };
+```
 
 ## Start the payment module
 
@@ -209,8 +210,8 @@ var molpay = require("MOLPayXDK");
 
 //start molpay payment
 molpay.startMolpay(paymentDetails, function(data){
-	//callback after payment success
-	alert(data);
+    //callback after payment success
+    alert(data);
 });
 
 ## Cash channel payment process (How does it work?)
@@ -236,3 +237,4 @@ Channel/Partner Enquiry : channel@molpay.com<br>
 Media Contact : media@molpay.com<br>
 R&D and Tech-related Suggestion : technical@molpay.com<br>
 Abuse Reporting : abuse@molpay.com
+com
