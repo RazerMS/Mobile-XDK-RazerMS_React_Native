@@ -206,10 +206,10 @@ var paymentDetails = {
 
 ## Start the payment module
 
-//import molpay package
+//import molpay package<br>
 var molpay = require("MOLPayXDK");
 
-//start molpay payment
+//start molpay payment<br>
 molpay.startMolpay(paymentDetails, function(data){
     //callback after payment success
     alert(data);
