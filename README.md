@@ -56,7 +56,8 @@ public class MainActivity extends ReactActivity {
         }
     }
     
-}```
+}
+```
 
 3) add the following code to add the package to `MainApplication.java`` (`MainActivity.java` if RN < 0.33)
 
