@@ -124,12 +124,10 @@ change the following codes in your `android/app/src/main/res/values/styles.xml`
 <p align="center">
     <img src ="https://raw.githubusercontent.com/MOLPay/molpay-mobile-xdk-reactnative-beta/master/assets/01.png" />
 </p>
-
-
 3) In Xcode right click on  `Libraries` select `Add Files to ...` option and  navigate to `node_modules/MOLPayXDK/ios` and add `MOLPayXDKlib.xcodeproj`
 
 
-4) expand `Link Binary With Libraries` and click `+` sign to add a new one. select `libMOLPayXDKlib.a` and click `Add` button.
+4) In Xcode click on project and find `Build Phases` then expand `Link Binary With Libraries` and click `+` sign to add a new library. select `libMOLPayXDKlib.a` and click `Add` button.
 
 5) final result will be like below (please make sure the MOLPayXDK.bundle and MOLPayXDK.framework also included)
 
@@ -242,7 +240,7 @@ var molpay = require("MOLPayXDK");
 //start molpay payment
 molpay.startMolpay(paymentDetails, function(data){
     //callback after payment success
-    alert(data);
+    console.log(data);
 });
 ```
 ## Cash channel payment process (How does it work?)
@@ -256,6 +254,10 @@ This is how the cash channels work on XDK:
 3) When later in time, the user would arrive at say 7-Eleven to make the payment, the host app then can call the XDK again to display the “Payment Instruction” again, then it has to pass in all the payment details like it will for the standard payment process, only this time, the host app will have to also pass in an extra value in the payment details, it’s the “mp_transaction_id”, the value has to be the same transaction returned in the results from the XDK earlier during the completion of the transaction. If the transaction id provided is accurate, the XDK will instead show the “Payment Instruction" in place of the standard payment screen.
 
 4) After the user done the paying at the 7-Eleven counter, they can close and exit MOLPay XDK by clicking the “Close” button again.
+
+##Tip
+
+1) Refer MOLPayReactExampleProject if have any issue.
 
 ## Support
 
