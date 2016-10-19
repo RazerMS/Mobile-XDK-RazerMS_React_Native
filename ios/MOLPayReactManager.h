@@ -17,5 +17,5 @@
 
 #import "RCTViewManager.h"
 
-@interface MOLPayReactManager : RCTViewManager
+@interface MOLPayReactManager : NSObject <RCTBridgeModule>
 @end

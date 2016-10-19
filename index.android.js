@@ -43,7 +43,6 @@ var jsonparse = function(paymentDetails) {
       }
     }
     payment = JSON.stringify(payment);
-    console.log(payment);
     return payment;
 }
 
@@ -57,6 +56,7 @@ var molpay = {
             } catch (e) {
                 if (errorCallback) {
                     errorCallback("Payment Details content wrong value or format");
+                    return;
                 }
             }
         } else if (typeof paymentDetails === "object") {

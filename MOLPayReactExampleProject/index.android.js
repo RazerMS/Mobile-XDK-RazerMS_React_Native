@@ -79,14 +79,19 @@ var molpay = require("MOLPayXDK");
 
 
 export default class MOLPayReactExampleProject extends Component {
-
+state = {
+  string : "s"
+}
 buttonClicked(){
   var c = this;
   // start molpay payment
   molpay.startMolpay(paymentDetails,function(data){
       //callback after payment success
-      alert(data);
+      c.setState({
+        string : data
+      })
       console.log(data);
+      
   });
 }
   render() {
@@ -104,13 +109,14 @@ buttonClicked(){
         </Text>
         <Text style={styles.instructions}>
           Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
+          Shake or press menu button for dev menu{'\n'}
+       {this.state.string}
         </Text>
         <View style={{flexDirection: 'row', height: 100, padding: 20}}>
         <TouchableElement
         style={{backgroundColor: 'grey', flex: 0.5}}
         onPress={this.buttonClicked.bind(this)}>
-        <View style={{backgroundColor: 'grey', flex: 0.5}}>
+        <View style={{backgroundColor: 'grey', flex: 0.5,justifyContent: 'center'}}>
           <Text style={{fontSize:30,color:'white',textAlign:'center'}}>Start Molpay!</Text>
         </View>
       </TouchableElement> 

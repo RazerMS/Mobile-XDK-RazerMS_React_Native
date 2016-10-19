@@ -19,6 +19,10 @@ This is the beta but functional MOLPay React Native payment module that is ready
 
 - Minimum React Navtive version : 0.19 ++
 
+- Xcode version: 7 ++
+
+- Minimum target version: iOS 7
+
 ## MOLPay Android Caveats
 
 Credit card payment channel is not available in Android 4.1, 4.2, and 4.3. due to lack of latest security (TLS 1.2) support on these Android platforms natively.
@@ -111,6 +115,31 @@ change the following codes in your `android/app/src/main/res/values/styles.xml`
 </resources>
 ```
 
+### IOS
+
+1) npm install https://github.com/MOLPay/molpay-mobile-xdk-reactnative-beta.git --save
+
+2) navigate to `node_modules/MOLPayXDK/ios` and copy MOLPayXDK.bundle and MOLPayXDK.framework into the application project folder `{ReactProject}/ios/` and open Xcode to perform all imports.
+
+<p align="center">
+    <img src ="https://raw.githubusercontent.com/MOLPay/molpay-mobile-xdk-reactnative-beta/master/assets/01.png" />
+</p>
+
+
+3) In Xcode right click on  `Libraries` select `Add Files to ...` option and  navigate to `node_modules/MOLPayXDK/ios` and add `MOLPayXDKlib.xcodeproj`
+
+
+4) expand `Link Binary With Libraries` and click `+` sign to add a new one. select `libMOLPayXDKlib.a` and click `Add` button.
+
+5) final result will be like below (please make sure the MOLPayXDK.bundle and MOLPayXDK.framework also included)
+
+<p align="center">
+    <img src ="https://raw.githubusercontent.com/MOLPay/molpay-mobile-xdk-reactnative-beta/master/assets/02.png" />
+</p>
+
+6) Add 'App Transport Security Settings > Allow Arbitrary Loads > YES' to the application project info.plist
+
+7) Add 'NSPhotoLibraryUsageDescription' > 'Payment images' to the application project info.plist
 
 =========================================
 Sample transaction result in JSON string:
@@ -206,15 +235,16 @@ var paymentDetails = {
 
 ## Start the payment module
 
-//import molpay package<br>
+```
+//import molpay package
 var molpay = require("MOLPayXDK");
 
-//start molpay payment<br>
+//start molpay payment
 molpay.startMolpay(paymentDetails, function(data){
     //callback after payment success
     alert(data);
 });
-
+```
 ## Cash channel payment process (How does it work?)
 
 This is how the cash channels work on XDK:
@@ -238,4 +268,3 @@ Channel/Partner Enquiry : channel@molpay.com<br>
 Media Contact : media@molpay.com<br>
 R&D and Tech-related Suggestion : technical@molpay.com<br>
 Abuse Reporting : abuse@molpay.com
-com
