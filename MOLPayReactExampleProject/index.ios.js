@@ -56,7 +56,7 @@ var paymentDetails = {
     'mp_transaction_id': '', // Optional, provide a valid cash channel transaction id here will display a payment instruction screen.
     'mp_request_type': '', // Optional, set 'Status' when doing a transactionRequest
 
-    // Optional, use this to customize the UI theme for the payment info screen, the original XDK custom.css file is provided at Example project source for reference and implementation. Required cordova-plugin-file to be installed
+    // Optional, use this to customize the UI theme for the payment info screen, the original XDK custom.css file is provided at Example project source for reference and implementation.
     'mp_custom_css_url': '',
 
     // Optional, set the token id to nominate a preferred token as the default selection, set "new" to allow new card only
@@ -69,7 +69,7 @@ var paymentDetails = {
     'mp_is_recurring': false,
 
     // Optional for channels restriction 
-    'mp_allowed_channels': ['credit', 'credit3'],
+    'mp_allowed_channels': [],
 
     // Optional for sandboxed development environment, set boolean value to enable.
     'mp_sandbox_mode': false,
@@ -89,7 +89,7 @@ export default class MOLPayReactExampleProject extends Component {
       molpay.startMolpay(paymentDetails,function(data){
           //callback after payment success
           c.setState({
-            string : JSON.stringify(data)
+            string : data
           })
       });
   }

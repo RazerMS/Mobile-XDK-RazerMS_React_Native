@@ -139,6 +139,9 @@ change the following codes in your `android/app/src/main/res/values/styles.xml`
 
 7) Add 'NSPhotoLibraryUsageDescription' > 'Payment images' to the application project info.plist
 
+## Sample Result
+
+```
 =========================================
 Sample transaction result in JSON string:
 =========================================
@@ -169,6 +172,7 @@ Parameter and meaning:
 1) Internet not available
 2) API credentials (username, password, merchant id, verify key)
 3) MOLPay server offline.
+```
 
 ## Prepare the Payment detail object
 
