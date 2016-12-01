@@ -33,8 +33,8 @@ var jsonparse = function(paymentDetails) {
         mp_allowed_channels: "",
         mp_sandbox_mode: "",
         mp_express_mode: "",
-        mp_advanced_email_validation_enabled: true,
-        mp_advanced_phone_validation_enabled: true
+        mp_advanced_email_validation_enabled: "",
+        mp_advanced_phone_validation_enabled: ""
     }
 
     for(var key in payment){
