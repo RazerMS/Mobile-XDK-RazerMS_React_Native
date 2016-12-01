@@ -32,7 +32,9 @@ var jsonparse = function(paymentDetails) {
         mp_is_recurring: "",
         mp_allowed_channels: "",
         mp_sandbox_mode: "",
-        mp_express_mode: ""
+        mp_express_mode: "",
+        mp_advanced_email_validation_enabled: true,
+        mp_advanced_phone_validation_enabled: true
     }
 
     for(var key in payment){

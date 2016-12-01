@@ -70,6 +70,8 @@ public class MOLPayReact extends ReactContextBaseJavaModule{
             paymentDetails.put(MOLPayActivity.mp_allowed_channels, obj.getString("mp_allowed_channels"));
             paymentDetails.put(MOLPayActivity.mp_sandbox_mode, obj.getString("mp_sandbox_mode"));
             paymentDetails.put(MOLPayActivity.mp_express_mode, obj.getString("mp_express_mode"));
+            paymentDetails.put(MOLPayActivity.mp_advanced_email_validation_enabled, obj.getString("mp_advanced_email_validation_enabled"));
+            paymentDetails.put(MOLPayActivity.mp_advanced_phone_validation_enabled, obj.getString("mp_advanced_phone_validation_enabled"));
 
         }catch(Exception e){
             if(this.errorCallback != null){
