@@ -12,10 +12,10 @@
 
 #endif /* MOLPayReact_h */
 // CalendarManager.h
-#import "RCTBridgeModule.h"
+#import <React/RCTBridgeModule.h>
 #import <MOLPayXDK/MOLPayLib.h>
 
-#import "RCTViewManager.h"
+#import <React/RCTViewManager.h>
 
 @interface MOLPayReactManager : NSObject <RCTBridgeModule>
 @end

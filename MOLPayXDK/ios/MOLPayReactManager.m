@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "MOLPayReactManager.h"
-#import "RCTBridgeModule.h"
+#import <React/RCTBridgeModule.h>
 
 
 #import <MOLPayXDK/MOLPayLib.h>
 
-#import "RCTView.h"
-#import "RCTRootView.h"
+#import <React/RCTView.h>
+#import <React/RCTRootView.h>
 #include "MOLPayReactViewController.h"
 
 @interface MOLPayReactManager ()

@@ -29,11 +29,14 @@ Credit card payment channel is not available in Android 4.1, 4.2, and 4.3. due t
 
 ## Installation
 
+
+1) git clone https://github.com/MOLPay/molpay-mobile-xdk-reactnative-beta.git or download the file by clicking clone or download
+
+2) Copy and paste MOLPayXDK folder into node_module/
+
 ### Android
 
-1) npm install https://github.com/MOLPay/molpay-mobile-xdk-reactnative-beta.git --save
-
-2) add the following import to `MainApplication.java` (`MainActivity.java` if RN < 0.33) of your application
+3) add the following import to `MainApplication.java` (`MainActivity.java` if RN < 0.33) of your application
 
 ```java
 import com.molpayxdk.MOLPayReact;
@@ -63,7 +66,7 @@ public class MainActivity extends ReactActivity {
 }
 ```
 
-3) add the following code to add the package to `MainApplication.java`` (`MainActivity.java` if RN < 0.33)
+4) add the following code to add the package to `MainApplication.java`` (`MainActivity.java` if RN < 0.33)
 
 ```java
 import com.molpayxdk.MOLPayReactPackage;
@@ -76,7 +79,7 @@ protected List<ReactPackage> getPackages() {
     }
 ```
 
-4) add the following codes to your `android/setting.gradle`
+5) add the following codes to your `android/setting.gradle`
 
 > you might have multiple 3rd party libraries, make sure that you don't create multiple include.
 
@@ -85,13 +88,13 @@ include ':app', ':MOLPayXDK'
 project(':MOLPayXDK').projectDir = new File(rootProject.projectDir, '../node_modules/MOLPayXDK/android')
 ```
 
-5) edit `android/app/build.gradle` and add the following line inside `dependencies`
+6) edit `android/app/build.gradle` and add the following line inside `dependencies`
 
 ```
 compile project(':MOLPayXDK')
 ```
 
-6) run `react-native run-android` to see if everything is compilable.
+7) run `react-native run-android` to see if everything is compilable.
 
 if have any issue when run-android please make sure your `android/local.properties` already set sdk path
 
@@ -100,7 +103,7 @@ ndk.dir=path/Android/sdk/ndk-bundle
 sdk.dir=path/Android/sdk
 ```
 
-7) (Optional) header include Close button in payment UI
+8) (Optional) header include Close button in payment UI
 change the following codes in your `android/app/src/main/res/values/styles.xml`
 ```
 <resources>
@@ -117,27 +120,25 @@ change the following codes in your `android/app/src/main/res/values/styles.xml`
 
 ### IOS
 
-1) npm install https://github.com/MOLPay/molpay-mobile-xdk-reactnative-beta.git --save
-
-2) navigate to `node_modules/MOLPayXDK/ios` and copy MOLPayXDK.bundle and MOLPayXDK.framework into the application project folder `{ReactProject}/ios/` and open Xcode to perform all imports.
+3) navigate to `node_modules/MOLPayXDK/ios` and copy MOLPayXDK.bundle and MOLPayXDK.framework into the application project folder `{ReactProject}/ios/` and open Xcode to perform all imports.
 
 <p align="center">
     <img src ="https://raw.githubusercontent.com/MOLPay/molpay-mobile-xdk-reactnative-beta/master/assets/01.png" />
 </p>
-3) In Xcode right click on  `Libraries` select `Add Files to ...` option and  navigate to `node_modules/MOLPayXDK/ios` and add `MOLPayXDKlib.xcodeproj`
+4) In Xcode right click on  `Libraries` select `Add Files to ...` option and  navigate to `node_modules/MOLPayXDK/ios` and add `MOLPayXDKlib.xcodeproj`
 
 
-4) In Xcode click on project and find `Build Phases` then expand `Link Binary With Libraries` and click `+` sign to add a new library. select `libMOLPayXDKlib.a` and click `Add` button.
+5) In Xcode click on project and find `Build Phases` then expand `Link Binary With Libraries` and click `+` sign to add a new library. select `libMOLPayXDKlib.a` and click `Add` button.
 
-5) final result will be like below (please make sure the MOLPayXDK.bundle and MOLPayXDK.framework also included)
+6) final result will be like below (please make sure the MOLPayXDK.bundle and MOLPayXDK.framework also included)
 
 <p align="center">
     <img src ="https://raw.githubusercontent.com/MOLPay/molpay-mobile-xdk-reactnative-beta/master/assets/02.png" />
 </p>
 
-6) Add 'App Transport Security Settings > Allow Arbitrary Loads > YES' to the application project info.plist
+7) Add 'App Transport Security Settings > Allow Arbitrary Loads > YES' to the application project info.plist
 
-7) Add 'NSPhotoLibraryUsageDescription' > 'Payment images' to the application project info.plist
+8) Add 'NSPhotoLibraryUsageDescription' > 'Payment images' to the application project info.plist
 
 ## Sample Result
 
