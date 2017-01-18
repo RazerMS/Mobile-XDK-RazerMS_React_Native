@@ -29,12 +29,11 @@ Credit card payment channel is not available in Android 4.1, 4.2, and 4.3. due t
 
 ## Installation
 
+### Android
 
 1) git clone https://github.com/MOLPay/molpay-mobile-xdk-reactnative-beta.git or download the file by clicking clone or download
 
 2) Copy and paste MOLPayXDK folder into node_module/
-
-### Android
 
 3) add the following import to `MainApplication.java` (`MainActivity.java` if RN < 0.33) of your application
 
@@ -119,6 +118,10 @@ change the following codes in your `android/app/src/main/res/values/styles.xml`
 ```
 
 ### IOS
+
+1) git clone https://github.com/MOLPay/molpay-mobile-xdk-reactnative-beta.git or download the file by clicking clone or download
+
+2) Copy and paste MOLPayXDK folder into node_module/
 
 3) navigate to `node_modules/MOLPayXDK/ios` and copy MOLPayXDK.bundle and MOLPayXDK.framework into the application project folder `{ReactProject}/ios/` and open Xcode to perform all imports.
 
@@ -274,10 +277,6 @@ molpay.startMolpay(paymentDetails, function(data){
 ## Private Secret Key checksum validation formula
 
     chksum = MD5(mp_merchant_ID + results.msgType + results.txn_ID + results.amount + results.status_code + merchant_private_secret_key)
-
-##Tip
-
-1) Refer MOLPayReactExampleProject if have any issue.
 
 ## Support
 
