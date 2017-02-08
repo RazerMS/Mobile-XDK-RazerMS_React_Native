@@ -17,7 +17,7 @@ This is the beta but functional MOLPay React Native payment module that is ready
 
 - Minimum Android target version: Android 4.1
 
-- Minimum React Navtive version : 0.19 ++
+- Minimum React Navtive version : 0.40.0 ++
 
 - Xcode version: 7 ++
 
@@ -241,7 +241,19 @@ var paymentDetails = {
     'mp_advanced_email_validation_enabled': true,
     
     // Optional, enable this for extended phone format validation based on Google i18n standards.
-    'mp_advanced_phone_validation_enabled' : true
+    'mp_advanced_phone_validation_enabled' : true,
+
+    // Optional, explicitly force disable billing name edit.
+    'mp_bill_name_edit_disabled': false,
+
+    // Optional, explicitly force disable billing email edit.
+    'mp_bill_email_edit_disabled': false,
+
+    // Optional, explicitly force disable billing mobile edit.
+    'mp_bill_mobile_edit_disabled': false,
+
+    // Optional, explicitly force disable billing description edit.
+    'mp_bill_description_edit_disabled': false
 };
 ```
 
