@@ -33,7 +33,7 @@ RCT_EXPORT_METHOD(setPaymentDetails:(NSDictionary *)paymentDetails callback:(RCT
     [mpvc.view setBackgroundColor:[UIColor whiteColor]];
     [paymentDetails setValue:@"YES" forKey:@"is_submodule"];
     [paymentDetails setValue:@"molpay-mobile-reactnative-beta-ios" forKey:@"module_id"];
-    [paymentDetails setValue:@"0" forKey:@"wrapper_version"];
+    [paymentDetails setValue:@"1" forKey:@"wrapper_version"];
   	mpvc.PaymentDetails = paymentDetails;
   	UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:mpvc];
   	mpvc.didDismiss = ^(NSDictionary *data) {
