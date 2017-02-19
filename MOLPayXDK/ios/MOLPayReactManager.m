@@ -29,12 +29,13 @@ RCT_EXPORT_MODULE();
 RCT_EXPORT_METHOD(setPaymentDetails:(NSDictionary *)paymentDetails callback:(RCTResponseSenderBlock)callback)
 {
     MOLPayReactViewController *mpvc = [[MOLPayReactViewController alloc] init];
+    NSMutableDictionary *paymentDetailsMutable = paymentDetails;
   
     [mpvc.view setBackgroundColor:[UIColor whiteColor]];
-    [paymentDetails setValue:@"YES" forKey:@"is_submodule"];
-    [paymentDetails setValue:@"molpay-mobile-reactnative-beta-ios" forKey:@"module_id"];
-    [paymentDetails setValue:@"1" forKey:@"wrapper_version"];
-  	mpvc.PaymentDetails = paymentDetails;
+    [paymentDetailsMutable setObject:@"YES" forKey:@"is_submodule"];
+    [paymentDetailsMutable setObject:@"molpay-mobile-reactnative-beta-ios" forKey:@"module_id"];
+    [paymentDetailsMutable setObject:@"2" forKey:@"wrapper_version"];
+    mpvc.PaymentDetails = paymentDetailsMutable;
   	UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:mpvc];
   	mpvc.didDismiss = ^(NSDictionary *data) {
     callback(@[data]);
