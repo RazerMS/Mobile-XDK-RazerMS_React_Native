@@ -29,7 +29,7 @@ RCT_EXPORT_MODULE();
 RCT_EXPORT_METHOD(setPaymentDetails:(NSDictionary *)paymentDetails callback:(RCTResponseSenderBlock)callback)
 {
     MOLPayReactViewController *mpvc = [[MOLPayReactViewController alloc] init];
-    NSMutableDictionary *paymentDetailsMutable = paymentDetails;
+    NSMutableDictionary *paymentDetailsMutable = [paymentDetails mutableCopy];
   
     [mpvc.view setBackgroundColor:[UIColor whiteColor]];
     [paymentDetailsMutable setObject:@"YES" forKey:@"is_submodule"];
