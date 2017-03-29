@@ -38,8 +38,10 @@ Credit card payment channel is not available in Android 4.1, 4.2, and 4.3. due t
 3) add the following import to `MainApplication.java` (`MainActivity.java` if RN < 0.33) of your application
 
 ```java
+//add these three
 import com.molpayxdk.MOLPayReact;
 import com.molpayxdk.MOLPayReactActivity;
+import android.content.Intent;
 
 public class MainActivity extends ReactActivity {
     /**

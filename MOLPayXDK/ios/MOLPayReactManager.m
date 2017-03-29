@@ -21,7 +21,7 @@
 
 @end
 
-// CalendarManager.m
+// MOLPayReactManager.m
 @implementation MOLPayReactManager
 
 RCT_EXPORT_MODULE();
@@ -33,8 +33,8 @@ RCT_EXPORT_METHOD(setPaymentDetails:(NSDictionary *)paymentDetails callback:(RCT
   
     [mpvc.view setBackgroundColor:[UIColor whiteColor]];
     [paymentDetailsMutable setObject:@"YES" forKey:@"is_submodule"];
-    [paymentDetailsMutable setObject:@"molpay-mobile-reactnative-beta-ios" forKey:@"module_id"];
-    [paymentDetailsMutable setObject:@"2" forKey:@"wrapper_version"];
+    [paymentDetailsMutable setObject:@"molpay-mobile-xdk-reactnative-beta-ios" forKey:@"module_id"];
+    [paymentDetailsMutable setObject:@"0" forKey:@"wrapper_version"];
     mpvc.PaymentDetails = paymentDetailsMutable;
   	UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:mpvc];
   	mpvc.didDismiss = ^(NSDictionary *data) {
