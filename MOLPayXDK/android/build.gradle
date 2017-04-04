@@ -14,5 +14,5 @@ android {
 
 dependencies {
     compile 'com.facebook.react:react-native:+'
-    compile 'com.molpay:molpay-mobile-xdk-android:3.10.0'
+    compile 'com.molpay:molpay-mobile-xdk-android:3.11.0'
 }
