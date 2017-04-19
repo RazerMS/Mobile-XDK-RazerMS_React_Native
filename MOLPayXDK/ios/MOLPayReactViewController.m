@@ -56,11 +56,13 @@
         NSLog(@"close");
         
         [self dismissViewControllerAnimated:NO completion:nil];
-        if (self.didDismiss)
+        if (self.didDismiss){
             self.didDismiss(paymentResult);
+        }
+    }else{
+        [self start];
     };
     
-    [self start];
 }
 
 - (void)didReceiveMemoryWarning {
