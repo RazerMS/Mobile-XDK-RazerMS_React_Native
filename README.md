@@ -83,14 +83,14 @@ protected List<ReactPackage> getPackages() {
 > you might have multiple 3rd party libraries, make sure that you don't create multiple include.
 
 ```
-include ':app', ':MOLPayXDK'
-project(':MOLPayXDK').projectDir = new File(rootProject.projectDir, '../node_modules/MOLPayXDK/android')
+include ':app', ':molpay-mobile-xdk-reactnative-beta'
+project(':molpay-mobile-xdk-reactnative-beta').projectDir = new File(rootProject.projectDir, '../node_modules/molpay-mobile-xdk-reactnative-beta/android')
 ```
 
 5) edit `android/app/build.gradle` and add the following line inside `dependencies`
 
 ```
-compile project(':MOLPayXDK')
+compile project(':molpay-mobile-xdk-reactnative-beta')
 ```
 
 6) run `react-native run-android` to see if everything is compilable.
@@ -121,12 +121,12 @@ change the following codes in your `android/app/src/main/res/values/styles.xml`
 
 1) npm install molpay-mobile-xdk-reactnative-beta
 
-2) navigate to `node_modules/MOLPayXDK/ios` and copy MOLPayXDK.bundle into the application project folder `{ReactProject}/ios/` and open Xcode to perform all imports.
+2) navigate to `node_modules/molpay-mobile-xdk-reactnative-beta/ios` and copy MOLPayXDK.bundle into the application project folder `{ReactProject}/ios/` and open Xcode to perform all imports.
 
 <p align="center">
     <img src ="https://raw.githubusercontent.com/MOLPay/molpay-mobile-xdk-reactnative-beta/master/assets/03.png" />
 </p>
-3) In Xcode right click on  `Libraries` select `Add Files to ...` option and  navigate to `node_modules/MOLPayXDK/ios` and add `MOLPayXDKlib.xcodeproj`
+3) In Xcode right click on  `Libraries` select `Add Files to ...` option and  navigate to `node_modules/molpay-mobile-xdk-reactnative-beta/ios` and add `MOLPayXDKlib.xcodeproj`
 
 
 4) In Xcode click on project and find `Build Phases` then expand `Link Binary With Libraries` and click `+` sign to add a new library. select `libMOLPayXDKlib.a` and click `Add` button.
