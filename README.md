@@ -124,7 +124,7 @@ change the following codes in your `android/app/src/main/res/values/styles.xml`
 2) navigate to `node_modules/MOLPayXDK/ios` and copy MOLPayXDK.bundle into the application project folder `{ReactProject}/ios/` and open Xcode to perform all imports.
 
 <p align="center">
-    <img src ="https://raw.githubusercontent.com/MOLPay/molpay-mobile-xdk-reactnative-beta/master/assets/01.png" />
+    <img src ="https://raw.githubusercontent.com/MOLPay/molpay-mobile-xdk-reactnative-beta/master/assets/03.png" />
 </p>
 3) In Xcode right click on  `Libraries` select `Add Files to ...` option and  navigate to `node_modules/MOLPayXDK/ios` and add `MOLPayXDKlib.xcodeproj`
 
@@ -134,7 +134,7 @@ change the following codes in your `android/app/src/main/res/values/styles.xml`
 5) final result will be like below (please make sure the MOLPayXDK.bundle also included)
 
 <p align="center">
-    <img src ="https://raw.githubusercontent.com/MOLPay/molpay-mobile-xdk-reactnative-beta/master/assets/02.png" />
+    <img src ="https://raw.githubusercontent.com/MOLPay/molpay-mobile-xdk-reactnative-beta/master/assets/04.png" />
 </p>
 
 6) Add 'App Transport Security Settings > Allow Arbitrary Loads > YES' to the application project info.plist
