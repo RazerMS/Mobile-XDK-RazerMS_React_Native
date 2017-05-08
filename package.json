@@ -1,10 +1,29 @@
 {
-  "name": "MOLPayXDK",
+  "name": "molpay-mobile-xdk-reactnative-beta",
   "version": "0.12.0",
-  "private": true,
+  "description": "MOLPay mobile payment for React Native (BETA)",
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MOLPay/molpay-mobile-xdk-reactnative-beta.git"
+  },
+  "keywords": [
+    "molpay",
+    "in",
+    "app",
+    "mobile",
+    "asia",
+    "payment",
+    "gateway",
+    "merchant",
+    "service"
+  ],
+  "author": "MOLPay Mobile Division",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MOLPay/molpay-mobile-xdk-reactnative-beta/issues"
+  },
+  "homepage": "https://github.com/MOLPay/molpay-mobile-xdk-reactnative-beta#readme"
 }
