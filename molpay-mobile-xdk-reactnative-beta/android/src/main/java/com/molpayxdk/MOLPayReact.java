@@ -76,9 +76,12 @@ public class MOLPayReact extends ReactContextBaseJavaModule{
             paymentDetails.put(MOLPayActivity.mp_bill_email_edit_disabled, obj.getString("mp_bill_email_edit_disabled"));
             paymentDetails.put(MOLPayActivity.mp_bill_mobile_edit_disabled, obj.getString("mp_bill_mobile_edit_disabled"));
             paymentDetails.put(MOLPayActivity.mp_bill_description_edit_disabled, obj.getString("mp_bill_description_edit_disabled"));
+            paymentDetails.put(MOLPayActivity.mp_language, obj.getString("mp_language"));
+            paymentDetails.put(MOLPayActivity.mp_dev_mode, obj.getString("mp_dev_mode"));
             paymentDetails.put("is_submodule", true);
             paymentDetails.put("module_id", "molpay-mobile-xdk-reactnative-beta-android");
             paymentDetails.put("wrapper_version", "0");
+
             
         }catch(Exception e){
             if(this.errorCallback != null){

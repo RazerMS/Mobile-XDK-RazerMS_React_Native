@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B82CE2CE1EAF078E00FBB375 /* MOLPayLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B82CE2C91EAF078E00FBB375 /* MOLPayLib.m */; };
+		B82CE2CF1EAF078E00FBB375 /* MOLPayMainUI.m in Sources */ = {isa = PBXBuildFile; fileRef = B82CE2CB1EAF078E00FBB375 /* MOLPayMainUI.m */; };
+		B82CE2D01EAF078E00FBB375 /* MOLPayWebview.m in Sources */ = {isa = PBXBuildFile; fileRef = B82CE2CD1EAF078E00FBB375 /* MOLPayWebview.m */; };
 		B8664EB41DAF84520057F0D1 /* MOLPayReactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8664EB31DAF84520057F0D1 /* MOLPayReactViewController.m */; };
 		B8664EB71DAF84D20057F0D1 /* MOLPayReactManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B8664EB61DAF84D20057F0D1 /* MOLPayReactManager.m */; };
 /* End PBXBuildFile section */
@@ -25,11 +28,16 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libMOLPayXDKlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMOLPayXDKlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B82CE2C81EAF078E00FBB375 /* MOLPayLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOLPayLib.h; sourceTree = "<group>"; };
+		B82CE2C91EAF078E00FBB375 /* MOLPayLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOLPayLib.m; sourceTree = "<group>"; };
+		B82CE2CA1EAF078E00FBB375 /* MOLPayMainUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOLPayMainUI.h; sourceTree = "<group>"; };
+		B82CE2CB1EAF078E00FBB375 /* MOLPayMainUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOLPayMainUI.m; sourceTree = "<group>"; };
+		B82CE2CC1EAF078E00FBB375 /* MOLPayWebview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOLPayWebview.h; sourceTree = "<group>"; };
+		B82CE2CD1EAF078E00FBB375 /* MOLPayWebview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOLPayWebview.m; sourceTree = "<group>"; };
 		B8664EB21DAF83ED0057F0D1 /* MOLPayReactViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MOLPayReactViewController.h; sourceTree = "<group>"; };
 		B8664EB31DAF84520057F0D1 /* MOLPayReactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOLPayReactViewController.m; sourceTree = "<group>"; };
 		B8664EB51DAF84C90057F0D1 /* MOLPayReactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOLPayReactManager.h; sourceTree = "<group>"; };
 		B8664EB61DAF84D20057F0D1 /* MOLPayReactManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOLPayReactManager.m; sourceTree = "<group>"; };
-		B8664EB81DAF84FE0057F0D1 /* MOLPayXDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOLPayXDK.framework; sourceTree = "<group>"; };
 		B8664EBA1DAF85080057F0D1 /* MOLPayXDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MOLPayXDK.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,8 +63,13 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				B82CE2C81EAF078E00FBB375 /* MOLPayLib.h */,
+				B82CE2C91EAF078E00FBB375 /* MOLPayLib.m */,
+				B82CE2CA1EAF078E00FBB375 /* MOLPayMainUI.h */,
+				B82CE2CB1EAF078E00FBB375 /* MOLPayMainUI.m */,
+				B82CE2CC1EAF078E00FBB375 /* MOLPayWebview.h */,
+				B82CE2CD1EAF078E00FBB375 /* MOLPayWebview.m */,
 				B8664EBA1DAF85080057F0D1 /* MOLPayXDK.bundle */,
-				B8664EB81DAF84FE0057F0D1 /* MOLPayXDK.framework */,
 				B8664EB61DAF84D20057F0D1 /* MOLPayReactManager.m */,
 				B8664EB51DAF84C90057F0D1 /* MOLPayReactManager.h */,
 				B8664EB31DAF84520057F0D1 /* MOLPayReactViewController.m */,
@@ -133,6 +146,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8664EB41DAF84520057F0D1 /* MOLPayReactViewController.m in Sources */,
+				B82CE2CE1EAF078E00FBB375 /* MOLPayLib.m in Sources */,
+				B82CE2D01EAF078E00FBB375 /* MOLPayWebview.m in Sources */,
+				B82CE2CF1EAF078E00FBB375 /* MOLPayMainUI.m in Sources */,
 				B8664EB71DAF84D20057F0D1 /* MOLPayReactManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

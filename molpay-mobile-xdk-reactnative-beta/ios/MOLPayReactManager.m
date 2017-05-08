@@ -11,7 +11,7 @@
 #import <React/RCTBridgeModule.h>
 
 
-#import <MOLPayXDK/MOLPayLib.h>
+#import "MOLPayLib.h"
 
 #import <React/RCTView.h>
 #import <React/RCTRootView.h>
@@ -34,7 +34,7 @@ RCT_EXPORT_METHOD(setPaymentDetails:(NSDictionary *)paymentDetails callback:(RCT
     [mpvc.view setBackgroundColor:[UIColor whiteColor]];
     [paymentDetailsMutable setObject:@"YES" forKey:@"is_submodule"];
     [paymentDetailsMutable setObject:@"molpay-mobile-xdk-reactnative-beta-ios" forKey:@"module_id"];
-    [paymentDetailsMutable setObject:@"1" forKey:@"wrapper_version"];
+    [paymentDetailsMutable setObject:@"0" forKey:@"wrapper_version"];
     mpvc.PaymentDetails = paymentDetailsMutable;
   	UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:mpvc];
   	mpvc.didDismiss = ^(NSDictionary *data) {

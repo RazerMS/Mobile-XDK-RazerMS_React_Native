@@ -2,7 +2,7 @@
 #import "MOLPayReactViewController.h"
 #import "MOLPayReactManager.h"
 
-#import <MOLPayXDK/MOLPayLib.h>
+#import "MOLPayLib.h"
 
 @interface MOLPayReactViewController () <MOLPayLibDelegate>
 {

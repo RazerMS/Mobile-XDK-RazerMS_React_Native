@@ -31,11 +31,9 @@ Credit card payment channel is not available in Android 4.1, 4.2, and 4.3. due t
 
 ### Android
 
-1) git clone https://github.com/MOLPay/molpay-mobile-xdk-reactnative-beta.git or download the file by clicking clone or download
+1) npm install molpay-mobile-xdk-reactnative-beta
 
-2) Copy and paste MOLPayXDK folder into node_module/
-
-3) add the following import to `MainApplication.java` (`MainActivity.java` if RN < 0.33) of your application
+2) add the following import to `MainApplication.java` (`MainActivity.java` if RN < 0.33) of your application
 
 ```java
 //add these three
@@ -67,7 +65,7 @@ public class MainActivity extends ReactActivity {
 }
 ```
 
-4) add the following code to add the package to `MainApplication.java`` (`MainActivity.java` if RN < 0.33)
+3) add the following code to add the package to `MainApplication.java`` (`MainActivity.java` if RN < 0.33)
 
 ```java
 import com.molpayxdk.MOLPayReactPackage;
@@ -80,7 +78,7 @@ protected List<ReactPackage> getPackages() {
     }
 ```
 
-5) add the following codes to your `android/setting.gradle`
+4) add the following codes to your `android/setting.gradle`
 
 > you might have multiple 3rd party libraries, make sure that you don't create multiple include.
 
@@ -89,13 +87,13 @@ include ':app', ':MOLPayXDK'
 project(':MOLPayXDK').projectDir = new File(rootProject.projectDir, '../node_modules/MOLPayXDK/android')
 ```
 
-6) edit `android/app/build.gradle` and add the following line inside `dependencies`
+5) edit `android/app/build.gradle` and add the following line inside `dependencies`
 
 ```
 compile project(':MOLPayXDK')
 ```
 
-7) run `react-native run-android` to see if everything is compilable.
+6) run `react-native run-android` to see if everything is compilable.
 
 if have any issue when run-android please make sure your `android/local.properties` already set sdk path
 
@@ -104,7 +102,7 @@ ndk.dir=path/Android/sdk/ndk-bundle
 sdk.dir=path/Android/sdk
 ```
 
-8) (Optional) header include Close button in payment UI
+7) (Optional) header include Close button in payment UI
 change the following codes in your `android/app/src/main/res/values/styles.xml`
 ```
 <resources>
@@ -121,29 +119,27 @@ change the following codes in your `android/app/src/main/res/values/styles.xml`
 
 ### IOS
 
-1) git clone https://github.com/MOLPay/molpay-mobile-xdk-reactnative-beta.git or download the file by clicking clone or download
+1) npm install molpay-mobile-xdk-reactnative-beta
 
-2) Copy and paste MOLPayXDK folder into node_module/
-
-3) navigate to `node_modules/MOLPayXDK/ios` and copy MOLPayXDK.bundle and MOLPayXDK.framework into the application project folder `{ReactProject}/ios/` and open Xcode to perform all imports.
+2) navigate to `node_modules/MOLPayXDK/ios` and copy MOLPayXDK.bundle into the application project folder `{ReactProject}/ios/` and open Xcode to perform all imports.
 
 <p align="center">
     <img src ="https://raw.githubusercontent.com/MOLPay/molpay-mobile-xdk-reactnative-beta/master/assets/01.png" />
 </p>
-4) In Xcode right click on  `Libraries` select `Add Files to ...` option and  navigate to `node_modules/MOLPayXDK/ios` and add `MOLPayXDKlib.xcodeproj`
+3) In Xcode right click on  `Libraries` select `Add Files to ...` option and  navigate to `node_modules/MOLPayXDK/ios` and add `MOLPayXDKlib.xcodeproj`
 
 
-5) In Xcode click on project and find `Build Phases` then expand `Link Binary With Libraries` and click `+` sign to add a new library. select `libMOLPayXDKlib.a` and click `Add` button.
+4) In Xcode click on project and find `Build Phases` then expand `Link Binary With Libraries` and click `+` sign to add a new library. select `libMOLPayXDKlib.a` and click `Add` button.
 
-6) final result will be like below (please make sure the MOLPayXDK.bundle and MOLPayXDK.framework also included)
+5) final result will be like below (please make sure the MOLPayXDK.bundle also included)
 
 <p align="center">
     <img src ="https://raw.githubusercontent.com/MOLPay/molpay-mobile-xdk-reactnative-beta/master/assets/02.png" />
 </p>
 
-7) Add 'App Transport Security Settings > Allow Arbitrary Loads > YES' to the application project info.plist
+6) Add 'App Transport Security Settings > Allow Arbitrary Loads > YES' to the application project info.plist
 
-8) Add 'NSPhotoLibraryUsageDescription' > 'Payment images' to the application project info.plist
+7) Add 'NSPhotoLibraryUsageDescription' > 'Payment images' to the application project info.plist
 
 ## Sample Result
 
@@ -237,7 +233,7 @@ var paymentDetails = {
     'mp_sandbox_mode': false,
 
     // Optional, required a valid mp_channel value, this will skip the payment info page and go direct to the payment screen.
-    'mp_express_mode': false
+    'mp_express_mode': false,
 
     // Optional, enable this for extended email format validation based on W3C standards.
     'mp_advanced_email_validation_enabled': true,
@@ -255,7 +251,13 @@ var paymentDetails = {
     'mp_bill_mobile_edit_disabled': false,
 
     // Optional, explicitly force disable billing description edit.
-    'mp_bill_description_edit_disabled': false
+    'mp_bill_description_edit_disabled': false,
+
+    // Optional, EN, MS, VI, TH, FIL, MY, KM, ID, ZH.
+    'mp_mp_language': "EN",
+
+    // Optional, enable for online sandbox testing.
+    'mp_dev_mode': false
 };
 ```
 
@@ -263,7 +265,7 @@ var paymentDetails = {
 
 ```
 //import molpay package
-var molpay = require("MOLPayXDK");
+var molpay = require("molpay-mobile-xdk-reactnative-beta");
 
 //start molpay payment
 molpay.startMolpay(paymentDetails, function(data){

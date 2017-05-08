@@ -13,7 +13,7 @@
 #endif /* MOLPayReact_h */
 // CalendarManager.h
 #import <React/RCTBridgeModule.h>
-#import <MOLPayXDK/MOLPayLib.h>
+#import "MOLPayLib.h"
 
 #import <React/RCTViewManager.h>
 
