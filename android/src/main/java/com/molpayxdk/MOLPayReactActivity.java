@@ -2,6 +2,7 @@ package com.molpayxdk;
 
 import android.app.Activity;
 import android.content.Intent;
+import java.util.HashMap;
 
 import com.molpay.molpayxdk.MOLPayActivity;
 

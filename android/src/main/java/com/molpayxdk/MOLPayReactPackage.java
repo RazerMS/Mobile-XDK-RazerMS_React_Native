@@ -12,9 +12,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Created by leow on 10/11/2016 AD.
- */
 public class MOLPayReactPackage implements ReactPackage{
 
     @Override
