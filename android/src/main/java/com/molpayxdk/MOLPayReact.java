@@ -42,11 +42,15 @@ public class MOLPayReact extends ReactContextBaseJavaModule{
             Iterator<String> iter = obj.keys();
             while (iter.hasNext()) {
                 String key = iter.next();
-                paymentDetails.put(key, obj.getString(key));
+                if(obj.getString(key).equals("true") || obj.getString(key).equals("false")){
+                    paymentDetails.put(key, obj.getBoolean(key));
+                }else{
+                    paymentDetails.put(key, obj.getString(key));
+                }
             }
             paymentDetails.put("is_submodule", true);
             paymentDetails.put("module_id", "molpay-mobile-xdk-reactnative-beta-android");
-            paymentDetails.put("wrapper_version", "0");
+            paymentDetails.put("wrapper_version", "1");
         }catch(Exception e){
             if(this.errorCallback != null){
                 this.errorCallback.invoke(e);

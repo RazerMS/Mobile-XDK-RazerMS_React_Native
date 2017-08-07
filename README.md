@@ -254,7 +254,7 @@ var paymentDetails = {
     'mp_bill_description_edit_disabled': false,
 
     // Optional, EN, MS, VI, TH, FIL, MY, KM, ID, ZH.
-    'mp_mp_language': "EN",
+    'mp_language': "EN",
 
     // Optional, enable for online sandbox testing.
     'mp_dev_mode': false
