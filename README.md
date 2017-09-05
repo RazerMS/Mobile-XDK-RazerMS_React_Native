@@ -17,7 +17,7 @@ This is the beta but functional MOLPay React Native payment module that is ready
 
 - Minimum Android target version: Android 4.1
 
-- Minimum React Navtive version : 0.40.0 ++
+- Minimum React Navtive version : 0.47.1 ++
 
 - Xcode version: 7 ++
 
@@ -272,6 +272,17 @@ molpay.startMolpay(paymentDetails, function(data){
     //callback after payment success
     console.log(data);
 });
+```
+
+## React Native android below than 0.47.1 build error
+
+Navigate to `node_modules/molpay-mobile-xdk-reactnative-beta/android/src/main/java/com/molpayxdk/MOLPayReactPackage.java` and add the below code. 
+
+```
+    @Override
+    public List<Class<? extends JavaScriptModule>> createJSModules() {
+        return Collections.emptyList();
+    }
 ```
 
 ## Cash channel payment process (How does it work?)
