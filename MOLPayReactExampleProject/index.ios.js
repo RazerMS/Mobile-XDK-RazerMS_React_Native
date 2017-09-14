@@ -4,9 +4,7 @@
  * @flow
  */
 
-import React, {
-    Component
-} from 'react';
+import React, { Component } from 'react';
 import {
     AppRegistry,
     StyleSheet,
@@ -18,7 +16,7 @@ import {
     Platform
 } from 'react-native';
 
-var molpay = require("MOLPayXDK");
+var molpay = require("molpay-mobile-xdk-reactnative-beta");
 
 var paymentDetails = {
     // Mandatory String. A value more than '1.00'
@@ -32,7 +30,7 @@ var paymentDetails = {
     'mp_verification_key': '',
 
     // Mandatory String. Payment values
-    'mp_order_ID': '',
+    'mp_order_ID': 'React0001',
     'mp_currency': 'MYR',
     'mp_country': 'MY',
 
@@ -42,8 +40,8 @@ var paymentDetails = {
     'mp_bill_name': 'anyname',
     'mp_bill_email': 'example@email.com',
     'mp_bill_mobile': '0161111111',
-    'mp_channel_editing': false, // Option to allow channel selection.
-    'mp_editing_enabled': false, // Option to allow billing information editing.
+    // 'mp_channel_editing': false, // Option to allow channel selection.
+    'mp_editing_enabled': true, // Option to allow billing information editing.
 
     // Optional for Escrow
     'mp_is_escrow': '', // Optional for Escrow, put "1" to enable escrow
@@ -75,7 +73,9 @@ var paymentDetails = {
     'mp_sandbox_mode': false,
 
     // Optional, required a valid mp_channel value, this will skip the payment info page and go direct to the payment screen.
-    'mp_express_mode': false
+    'mp_express_mode': false,
+    // 'mp_timeout' : 30,
+    // "mp_bill_description_edit_disabled": true,
 };
 
 export default class MOLPayReactExampleProject extends Component {

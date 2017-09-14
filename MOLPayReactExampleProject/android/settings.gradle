@@ -1,5 +1,4 @@
 rootProject.name = 'MOLPayReactExampleProject'
 
-
-include ':app', ':MOLPayXDK'
-project(':MOLPayXDK').projectDir = new File(rootProject.projectDir, '../node_modules/MOLPayXDK/android')
+include ':app', ':molpay-mobile-xdk-reactnative-beta'
+project(':molpay-mobile-xdk-reactnative-beta').projectDir = new File(rootProject.projectDir, '../node_modules/molpay-mobile-xdk-reactnative-beta/android')
