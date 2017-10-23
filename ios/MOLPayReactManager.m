@@ -38,6 +38,7 @@ RCT_EXPORT_METHOD(setPaymentDetails:(NSDictionary *)paymentDetails callback:(RCT
     mpvc.PaymentDetails = paymentDetailsMutable;
   	UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:mpvc];
   	mpvc.didDismiss = ^(NSDictionary *data) {
+      [[[[UIApplication sharedApplication] windows] firstObject] makeKeyAndVisible];
     callback(@[data]);
   };
   dispatch_sync(dispatch_get_main_queue(), ^{
