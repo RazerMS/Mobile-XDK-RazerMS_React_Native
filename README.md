@@ -191,7 +191,7 @@ var paymentDetails = {
     'mp_country': 'MY',
 
     // Optional String.
-    'mp_channel': '', // Use 'multi' for all available channels option. For individual channel seletion, please refer to "Channel Parameter" in "Channel Lists" in the MOLPay API Spec for Merchant pdf. 
+    'mp_channel': '', // Use 'multi' for all available channels option. For individual channel seletion, please refer to https://github.com/MOLPay/molpay-mobile-xdk-examples/blob/master/channel_list.tsv. 
     'mp_bill_description': 'test payment',
     'mp_bill_name': 'anyname',
     'mp_bill_email': 'example@email.com',
