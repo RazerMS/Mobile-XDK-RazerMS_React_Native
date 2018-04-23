@@ -137,6 +137,8 @@ change the following codes in your `android/app/src/main/res/values/styles.xml`
 
 7) Add 'NSPhotoLibraryUsageDescription' > 'Payment images' to the application project info.plist
 
+8) Add 'NSPhotoLibraryAddUsageDescription' > 'Payment images' to the application project info.plist
+
 ## Sample Result
 
 ```
