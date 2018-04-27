@@ -2,6 +2,8 @@
  # license: Copyright © 2011-2016 MOLPay Sdn Bhd. All Rights Reserved. 
  -->
 
+<img src="https://user-images.githubusercontent.com/38641542/39353138-654385dc-4a39-11e8-9710-19e5f03ec62e.jpg">
+
 # molpay-mobile-xdk-reactnative-beta
 
 This is the beta but functional MOLPay React Native payment module that is ready to be implemented into any React Native project npm install module. An example application project 
