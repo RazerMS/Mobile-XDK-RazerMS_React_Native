@@ -5,6 +5,11 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.molpay.molpayxdk.MOLPayActivity;
+import android.content.Intent;
+
+import android.app.Activity;
+import com.facebook.react.bridge.ActivityEventListener;
+import com.facebook.react.bridge.BaseActivityEventListener;
 
 import org.json.JSONObject;
 
@@ -13,10 +18,21 @@ import java.util.Iterator;
 
 import javax.annotation.Nullable;
 
-public class MOLPayReact extends ReactContextBaseJavaModule{
+public class MOLPayReact extends ReactContextBaseJavaModule {
     public static HashMap<String, Object> paymentDetails;
     public static Callback successCallback;
     public static Callback errorCallback;
+
+      private final ActivityEventListener mActivityEventListener = new BaseActivityEventListener() {
+    @Override
+    public void onActivityResult(final Activity activity,int requestCode, int resultCode, Intent data) {
+        if (requestCode == MOLPayActivity.MOLPayXDK && resultCode == Activity.RESULT_OK){
+            if(successCallback != null){
+                successCallback.invoke(data.getStringExtra(MOLPayActivity.MOLPayTransactionResult));
+            }
+        }
+    }
+  };
 
     @Override
     public String getName() {
@@ -26,6 +42,7 @@ public class MOLPayReact extends ReactContextBaseJavaModule{
 
     public MOLPayReact(ReactApplicationContext reactContext) {
         super(reactContext);
+        reactContext.addActivityEventListener(mActivityEventListener);
     }
 
     @ReactMethod
@@ -56,8 +73,9 @@ public class MOLPayReact extends ReactContextBaseJavaModule{
                 this.errorCallback.invoke(e);
             }
         }
-        MOLPayReactActivity m = new MOLPayReactActivity();
-        m.PaymentUpdated(getCurrentActivity());
+         Intent intent = new Intent(getCurrentActivity(), MOLPayActivity.class);
+        intent.putExtra(MOLPayActivity.MOLPayPaymentDetails, this.paymentDetails);
+        getCurrentActivity().startActivityForResult(intent, MOLPayActivity.MOLPayXDK);
     }
 
 

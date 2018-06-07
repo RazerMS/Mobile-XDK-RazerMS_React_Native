@@ -13,7 +13,7 @@ This is the beta but functional MOLPay React Native payment module that is ready
 
 - Node.js Version: 5.3.0 ++
 
-- Minimum Android SDK Version: 25 ++
+- Minimum Android SDK Version: 27 ++
 
 - Minimum Android API level: 19 ++
 
@@ -21,9 +21,9 @@ This is the beta but functional MOLPay React Native payment module that is ready
 
 - Minimum React Navtive version : 0.47.1 ++
 
-- Xcode version: 7 ++
+- Xcode version: 9 ++
 
-- Minimum target version: iOS 7
+- Minimum target version: iOS 8
 
 ## Installation
 
@@ -31,42 +31,10 @@ This is the beta but functional MOLPay React Native payment module that is ready
 
 1) npm install molpay-mobile-xdk-reactnative-beta
 
-2) add the following import to `MainApplication.java` (`MainActivity.java` if RN < 0.33) of your application
+2) add the following code to add the package to `MainApplication.java` (`MainActivity.java` if RN < 0.33)
 
 ```java
-//add these three
-import com.molpayxdk.MOLPayReact;
-import com.molpayxdk.MOLPayReactActivity;
-import android.content.Intent;
-
-public class MainActivity extends ReactActivity {
-    /**
-     * Returns the name of the main component registered from JavaScript.
-     * This is used to schedule rendering of the component.
-     */
-    @Override
-    protected String getMainComponentName() {
-        return "MOLPayReactExampleProject";
-    }
-
-    //add activity result in here
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data)
-    {
-        if (requestCode == MOLPayReactActivity.MOLPayReactXDK && resultCode == RESULT_OK){
-            if(MOLPayReact.successCallback != null){
-                MOLPayReact.successCallback.invoke(data.getStringExtra(MOLPayReactActivity.MOLPayTransactionResult));
-            }
-        }
-    }
-    
-}
-```
-
-3) add the following code to add the package to `MainApplication.java`` (`MainActivity.java` if RN < 0.33)
-
-```java
-import com.molpayxdk.MOLPayReactPackage;
+import com.molpayxdk.MOLPayReactPackage; //<- this
 
 protected List<ReactPackage> getPackages() {
         return Arrays.<ReactPackage>asList(
@@ -76,7 +44,7 @@ protected List<ReactPackage> getPackages() {
     }
 ```
 
-4) add the following codes to your `android/setting.gradle`
+3) add the following codes to your `android/setting.gradle`
 
 > you might have multiple 3rd party libraries, make sure that you don't create multiple include.
 
@@ -85,13 +53,13 @@ include ':app', ':molpay-mobile-xdk-reactnative-beta'
 project(':molpay-mobile-xdk-reactnative-beta').projectDir = new File(rootProject.projectDir, '../node_modules/molpay-mobile-xdk-reactnative-beta/android')
 ```
 
-5) edit `android/app/build.gradle` and add the following line inside `dependencies`
+4) edit `android/app/build.gradle` and add the following line inside `dependencies`
 
 ```
 compile project(':molpay-mobile-xdk-reactnative-beta')
 ```
 
-6) run `react-native run-android` to see if everything is compilable.
+5) run `react-native run-android` to see if everything is compilable.
 
 if have any issue when run-android please make sure your `android/local.properties` already set sdk path
 
@@ -100,7 +68,7 @@ ndk.dir=path/Android/sdk/ndk-bundle
 sdk.dir=path/Android/sdk
 ```
 
-7) (Optional) header include Close button in payment UI
+6) (Optional) header include Close button in payment UI
 change the following codes in your `android/app/src/main/res/values/styles.xml`
 ```
 <resources>
