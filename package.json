@@ -1,6 +1,6 @@
 {
   "name": "molpay-mobile-xdk-reactnative-beta",
-  "version": "0.20.0",
+  "version": "0.21.0",
   "description": "MOLPay mobile payment for React Native (BETA)",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
