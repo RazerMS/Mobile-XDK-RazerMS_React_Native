@@ -13,11 +13,6 @@ android {
 }
 
 dependencies {
-<<<<<<< HEAD
-    compile 'com.facebook.react:react-native:+'
-    compile 'com.molpay:molpay-mobile-xdk-android:3.20.0'
-=======
     implementation 'com.facebook.react:react-native:+'
     implementation 'com.molpay:molpay-mobile-xdk-android:3.21.0'
->>>>>>> 489a072... update android gradle
 }
