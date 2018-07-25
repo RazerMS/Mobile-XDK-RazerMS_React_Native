@@ -14,5 +14,5 @@ android {
 
 dependencies {
     implementation 'com.facebook.react:react-native:+'
-    implementation 'com.molpay:molpay-mobile-xdk-android:3.21.0'
+    implementation 'com.molpay:molpay-mobile-xdk-android:3.22.0'
 }
