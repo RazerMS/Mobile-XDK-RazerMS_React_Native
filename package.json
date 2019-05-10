@@ -1,7 +1,7 @@
 {
   "name": "molpay-mobile-xdk-reactnative-beta",
-  "version": "0.22.0",
-  "description": "MOLPay mobile payment for React Native (BETA)",
+  "version": "0.24.0",
+  "description": "Razer Merchant Services mobile payment for React Native (BETA)",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,7 +20,7 @@
     "merchant",
     "service"
   ],
-  "author": "MOLPay Mobile Division",
+  "author": "Razer Merchant Services Mobile Division",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MOLPay/molpay-mobile-xdk-reactnative-beta/issues"
