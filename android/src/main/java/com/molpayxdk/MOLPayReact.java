@@ -4,7 +4,7 @@ import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.molpay.molpayxdk.MOLPayActivity;
+import com.molpayxdk.MOLPayActivity;
 import android.content.Intent;
 
 import android.app.Activity;
