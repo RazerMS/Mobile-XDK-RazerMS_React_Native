@@ -1,4 +1,4 @@
-package com.molpayreactexampleproject;
+package com.test0270;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "MOLPayReactExampleProject";
+        return "test0270";
     }
 }

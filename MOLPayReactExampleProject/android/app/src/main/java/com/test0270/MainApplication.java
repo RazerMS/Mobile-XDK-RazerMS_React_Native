@@ -1,4 +1,4 @@
-package com.molpayreactexampleproject;
+package com.test0270;
 
 import android.app.Application;
 
@@ -7,10 +7,10 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
+import com.molpayxdk.MOLPayReactPackage;
 
 import java.util.Arrays;
 import java.util.List;
-import com.molpayxdk.MOLPayReactPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -24,8 +24,13 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new MOLPayReactPackage() //<- this
+            new MOLPayReactPackage()
       );
+    }
+
+    @Override
+    protected String getJSMainModuleName() {
+      return "index";
     }
   };
 
