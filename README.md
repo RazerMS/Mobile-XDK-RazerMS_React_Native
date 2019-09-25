@@ -27,7 +27,27 @@ This is the beta but functional Razer Merchant Services React Native payment mod
 
 ## Installation
 
-### Android
+### Auto link (RN > 0.61.0)
+
+#### Android
+
+1) npm install molpay-mobile-xdk-reactnative-beta
+
+#### iOS
+
+1) npm install molpay-mobile-xdk-reactnative-beta
+
+2) cd ios && pod install && cd ..
+
+3) Add 'App Transport Security Settings > Allow Arbitrary Loads > YES' to the application project info.plist
+
+4) Add 'NSPhotoLibraryUsageDescription' > 'Payment images' to the application project info.plist
+
+5) Add 'NSPhotoLibraryAddUsageDescription' > 'Payment images' to the application project info.plist
+
+### Manual link (RN < 0.60.0)
+
+#### Android
 
 1) npm install molpay-mobile-xdk-reactnative-beta
 
@@ -83,7 +103,7 @@ change the following codes in your `android/app/src/main/res/values/styles.xml`
 </resources>
 ```
 
-### IOS
+#### IOS
 
 1) npm install molpay-mobile-xdk-reactnative-beta
 
