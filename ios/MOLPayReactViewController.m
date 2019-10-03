@@ -43,7 +43,10 @@
     
     
     mp.navigationItem.hidesBackButton = YES;
-    
+    if (@available(iOS 13, *)) {
+        mp.modalInPresentation = YES;
+    }
+    [nc setModalPresentationStyle: UIModalPresentationFullScreen];
     [self presentViewController:nc animated:NO completion:nil];
 }
 

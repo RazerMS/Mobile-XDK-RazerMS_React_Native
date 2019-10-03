@@ -1,6 +1,6 @@
 {
   "name": "molpay-mobile-xdk-reactnative-beta",
-  "version": "0.27.1",
+  "version": "0.27.2",
   "description": "Razer Merchant Services mobile payment for React Native (BETA)",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
