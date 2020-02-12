@@ -189,6 +189,63 @@ const NSString *wrapperVersion = @"0";
         [[MOLPayMainUI getInstance] transactionRequest];
         isTransactionRequestInQueue = NO;
     }
+
+    if([requestPath rangeOfString:@"intermediate_appTNG-EWALLET.php"].location != NSNotFound){
+        NSLog(@"contain url");
+        
+        NSString *html = [webView stringByEvaluatingJavaScriptFromString: @"document.getElementById('systembrowserurl').innerHTML;"];
+
+        if(html != nil) {
+            // Base64 Decode minimum iOS7
+            NSData *nsdataFromHtmlStringBase64 = [[NSData alloc] initWithBase64EncodedString:html options:0];
+            NSString *htmlString = [[NSString alloc] initWithData:nsdataFromHtmlStringBase64 encoding:NSUTF8StringEncoding];
+            NSLog(@"Decoded TNG htmlString: %@", htmlString);
+
+            //Open new window if htmlString isn't empty string
+            if (htmlString.length > 0) {
+                UIApplication *application = [UIApplication sharedApplication];
+                NSURL *URL = [NSURL URLWithString:htmlString];
+                if ([application canOpenURL:URL]) {
+                    [application openURL:URL options:@{} completionHandler:^(BOOL success) {
+                        NSLog(@"Open TNG Url %d", success);
+                    }];
+                }
+            }
+            else {
+                NSLog(@"mpopenmolpaywindow is empty, skip open new window");
+            }
+        }
+        // [webView evaluateJavaScript:@"document.getElementById('systembrowserurl').innerHTML" completionHandler:^(NSString *result, NSError *error) {
+        //     if(result != nil) {
+                 
+        //         // Base64 Decode minimum iOS7
+        //         NSData *nsdataFromHtmlStringBase64 = [[NSData alloc] initWithBase64EncodedString:result options:0];
+        //         NSString *htmlString = [[NSString alloc] initWithData:nsdataFromHtmlStringBase64 encoding:NSUTF8StringEncoding];
+        //         DLog(@"Decoded TNG htmlString: %@", htmlString);
+        //         NSLog(@"Decoded TNG htmlString: %@", htmlString);
+                    
+        //         // Open new window if htmlString isn't empty string
+        //         if (htmlString.length > 0) {
+        //             UIApplication *application = [UIApplication sharedApplication];
+        //             NSURL *URL = [NSURL URLWithString:htmlString];
+        //             if ([application canOpenURL:URL]) {
+        //                 [application openURL:URL options:@{} completionHandler:^(BOOL success) {
+        //                      DLog(@"Open TNG Url %d", success);
+        //                      NSLog(@"Open TNG Url %d", success);
+        //                  }];
+        //             }
+        //         }
+        //         else {
+        //             DLog(@"mpopenmolpaywindow is empty, skip open new window");
+        //             NSLog(@"mpopenmolpaywindow is empty, skip open new window");
+        //         }
+        //     }
+        //     if(error != nil) {
+        //         NSLog(@"SomeFunction Error: %@",error);
+        //         return;
+        //     }
+        // }];
+    }
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType

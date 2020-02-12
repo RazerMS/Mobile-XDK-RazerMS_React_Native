@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.MediaScannerConnection;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
@@ -21,6 +22,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.webkit.CookieManager;
+import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -249,6 +251,38 @@ public class MOLPayActivity extends AppCompatActivity {
                 nativeWebRequestUrlUpdates(url);
             }
         }
+
+        @Override
+		public void onPageFinished (WebView view, String url) {
+		    Log.d(MOLPAY, "MPMOLPayUIWebClient onPageFinished url = " + url);
+
+		    if (url.indexOf("intermediate_appTNG-EWALLET.php") > -1) {
+
+			Log.d(MOLPAY, "contains url");
+
+                view.evaluateJavascript("document.getElementById(\"systembrowserurl\").innerHTML", new ValueCallback<String>() {
+                    @Override
+                    public void onReceiveValue(String s) {
+                        String base64String = s;
+                        Log.d(MOLPAY, "MPMOLPayUIWebClient base64String = " + base64String);
+
+                        // Decode base64
+                        byte[] data = Base64.decode(base64String, Base64.DEFAULT);
+                        String dataString = new String(data);
+                        Log.d(MOLPAY, "MPBankUIWebClient dataString = " + dataString);
+
+                        if (base64String.length() > 0) {
+                            Log.d(MOLPAY, "MPMOLPayUIWebClient success");
+                            Intent intent= new Intent(Intent.ACTION_VIEW, Uri.parse(dataString));
+                            startActivity(intent);
+                        } else {
+                            Log.d(MOLPAY, "MPMOLPayUIWebClient empty dataString");
+                        }
+                    }
+                });
+
+		    }
+		}
     }
 
     private class MPMOLPayUIWebChromeClient extends WebChromeClient {

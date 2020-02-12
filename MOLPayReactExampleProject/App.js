@@ -27,28 +27,28 @@ export default class App extends Component<Props> {
 var molpay = require("molpay-mobile-xdk-reactnative-beta");
       var paymentDetails = {
     // Mandatory String. A value more than '1.00'
-    'mp_amount': 1.1,
+    'mp_amount': '',
 
     // Mandatory String. Values obtained from MOLPay
-    'mp_username': 'username',
-    'mp_password': 'password',
-    'mp_merchant_ID': 'merchantID',
-    'mp_app_name': 'appname',
-    'mp_verification_key': '12345123451234512345',
+    'mp_username': '',
+    'mp_password': '',
+    'mp_merchant_ID': '',
+    'mp_app_name': '',
+    'mp_verification_key': '',
 
     // Mandatory String. Payment values
-    'mp_order_ID': 'React0002',
+    'mp_order_ID': '',
     'mp_currency': 'MYR',
     'mp_country': 'MY',
 
     // Optional String.
-    'mp_channel': '', // Use 'multi' for all available channels option. For individual channel seletion, please refer to "Channel Parameter" in "Channel Lists" in the MOLPay API Spec for Merchant pdf. 
-    'mp_bill_description': 'test payment',
-    'mp_bill_name': 'anyname',
+    'mp_channel': 'multi', // Use 'multi' for all available channels option. For individual channel seletion, please refer to "Channel Parameter" in "Channel Lists" in the MOLPay API Spec for Merchant pdf. 
+    'mp_bill_description': 'description',
+    'mp_bill_name': 'name',
     'mp_bill_email': 'example@email.com',
-    'mp_bill_mobile': '0161111111',
+    'mp_bill_mobile': '+60123456789',
     // 'mp_channel_editing': true, // Option to allow channel selection.
-    'mp_editing_enabled': true, // Option to allow billing information editing.
+    //'mp_editing_enabled': true, // Option to allow billing information editing.
 
      // Optional for Escrow
     // 'mp_is_escrow': '', // Optional for Escrow, put "1" to enable escrow
@@ -82,6 +82,7 @@ var molpay = require("molpay-mobile-xdk-reactnative-beta");
     // Optional, required a valid mp_channel value, this will skip the payment info page and go direct to the payment screen.
     // 'mp_express_mode': false,
     // "mp_bill_description_edit_disabled": false,
+    //"mp_dev_mode": true
 
 };
       // start molpay payment
