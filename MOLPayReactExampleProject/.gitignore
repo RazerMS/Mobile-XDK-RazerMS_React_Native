@@ -32,7 +32,7 @@ local.properties
 
 # node.js
 #
-node_modules/
+node_modules
 npm-debug.log
 yarn-error.log
 
@@ -54,3 +54,5 @@ buck-out/
 
 # Bundle artifact
 *.jsbundle
+
+.yalc

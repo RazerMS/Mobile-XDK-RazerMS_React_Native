@@ -82,7 +82,7 @@ var molpay = require("molpay-mobile-xdk-reactnative-beta");
     // Optional, required a valid mp_channel value, this will skip the payment info page and go direct to the payment screen.
     // 'mp_express_mode': false,
     // "mp_bill_description_edit_disabled": false,
-    //"mp_dev_mode": true
+    // "mp_dev_mode": true
 
 };
       // start molpay payment

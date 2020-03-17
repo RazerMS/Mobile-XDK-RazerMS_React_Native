@@ -7,7 +7,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>testappurl</string>
+				<string>lamboplaceapp</string>
 			</array>
 		</dict>
 	</array>
