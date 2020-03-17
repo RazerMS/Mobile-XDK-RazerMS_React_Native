@@ -2,9 +2,10 @@
  # license: Copyright © 2011-2016 MOLPay Sdn Bhd. All Rights Reserved. 
  -->
 
-<img src="https://user-images.githubusercontent.com/38641542/39353138-654385dc-4a39-11e8-9710-19e5f03ec62e.jpg">
-
 # rms-mobile-xdk-reactnative-beta
+
+<img src="https://user-images.githubusercontent.com/38641542/74424311-a9d64000-4e8c-11ea-8d80-d811cfe66972.jpg">
+
 
 This is the beta but functional Razer Merchant Services React Native payment module that is ready to be implemented into any React Native project npm install module. An example application project 
 (MOLPayReactExampleProject) is provided for Razer Merchant Services XDK framework integration reference.
@@ -110,7 +111,7 @@ change the following codes in your `android/app/src/main/res/values/styles.xml`
 2) navigate to `node_modules/molpay-mobile-xdk-reactnative-beta/ios` and copy MOLPayXDK.bundle into the application project folder `{ReactProject}/ios/` and open Xcode to perform all imports.
 
 <p align="center">
-    <img src ="https://raw.githubusercontent.com/MOLPay/molpay-mobile-xdk-reactnative-beta/master/assets/03.png" />
+    <img src ="https://raw.githubusercontent.com/RazerMS/rms-mobile-xdk-reactnative-beta/master/assets/03.png" />
 </p>
 3) In Xcode right click on  `Libraries` select `Add Files to ...` option and  navigate to `node_modules/molpay-mobile-xdk-reactnative-beta/ios` and add `MOLPayXDKlib.xcodeproj`
 
@@ -185,7 +186,7 @@ var paymentDetails = {
     'mp_country' : 'MY',  
     
     // Optional String.
-    'mp_channel' : '', // Use 'multi' for all available channels option. For individual channel seletion, please refer to https://github.com/MOLPay/molpay-mobile-xdk-examples/blob/master/channel_list.tsv.
+    'mp_channel' : '', // Use 'multi' for all available channels option. For individual channel seletion, please refer to https://github.com/RazerMS/rms-mobile-xdk-examples/blob/master/channel_list.tsv.
     'mp_bill_description' : '',
     'mp_bill_name' : '',
     'mp_bill_email' : '',
@@ -194,7 +195,7 @@ var paymentDetails = {
     'mp_editing_enabled' : false, // Option to allow billing information editing.
     
     // Optional, but required payment values. User input will be required when values not passed.
-    'mp_channel' : 'multi', // Use 'multi' for all available channels option. For individual channel seletion, please refer to https://github.com/MOLPay/molpay-mobile-xdk-examples/blob/master/channel_list.tsv.
+    'mp_channel' : 'multi', // Use 'multi' for all available channels option. For individual channel seletion, please refer to https://github.com/RazerMS/rms-mobile-xdk-examples/blob/master/channel_list.tsv.
     'mp_bill_description' : 'billdesc',
     'mp_bill_name' : 'billname',
     'mp_bill_email' : 'email@domain.com',
@@ -221,7 +222,7 @@ var paymentDetails = {
     // Optional, use 'Receipt' for Cash channels, and 'Status' for transaction status query.
     'mp_request_type': '',
 
-    // Optional, use this to customize the UI theme for the payment info screen, the original XDK custom.css file can be obtained at https://github.com/MOLPay/molpay-mobile-xdk-examples/blob/master/custom.css.
+    // Optional, use this to customize the UI theme for the payment info screen, the original XDK custom.css file can be obtained at https://github.com/RazerMS/rms-mobile-xdk-examples/blob/master/custom.css.
     'mp_custom_css_url': '',
 
     // Optional, set the token id to nominate a preferred token as the default selection, set "new" to allow new card only.
