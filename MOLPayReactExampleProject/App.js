@@ -37,7 +37,7 @@ var molpay = require("molpay-mobile-xdk-reactnative-beta");
     'mp_verification_key': '',
 
     // Mandatory String. Payment values
-    'mp_order_ID': '',
+    'mp_order_ID': '1528478239',
     'mp_currency': 'MYR',
     'mp_country': 'MY',
 
