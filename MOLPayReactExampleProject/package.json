@@ -7,7 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "molpay-mobile-xdk-reactnative-beta": "^0.29.1",
+    "molpay-mobile-xdk-reactnative-beta": "^0.30.0",
     "react": "16.8.3",
     "react-native": "0.59.9"
   },
