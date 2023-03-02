@@ -9,7 +9,7 @@
   "dependencies": {
     "molpay-mobile-xdk-reactnative-beta": "^0.31.0",
     "react": "16.8.3",
-    "react-native": "0.59.9"
+    "react-native": "0.71.3"
   },
   "devDependencies": {
     "@babel/core": "7.4.5",
