@@ -2,12 +2,12 @@
  # license: Copyright © 2011-2016 MOLPay Sdn Bhd. All Rights Reserved. 
  -->
 
-# [Mobile XDK] – RazerMS React Native Beta
+# [Mobile XDK] – RazerMS React Native
 
 <img src="https://user-images.githubusercontent.com/38641542/74424311-a9d64000-4e8c-11ea-8d80-d811cfe66972.jpg">
 
 
-This is the beta but functional Razer Merchant Services React Native payment module that is ready to be implemented into any React Native project npm install module. An example application project 
+Razer Merchant Services React Native payment module that is ready to be implemented into any React Native project npm install module. An example application project 
 (MOLPayReactExampleProject) is provided for Razer Merchant Services XDK framework integration reference.
 
 ## Recommended configurations
@@ -28,7 +28,7 @@ This is the beta but functional Razer Merchant Services React Native payment mod
 
 ## Installation Guidance
 
-[Installation](https://github.com/RazerMS/rms-mobile-xdk-reactnative-beta/wiki/Installation-Guidance)
+[Installation](https://github.com/RazerMS/rms-mobile-xdk-reactnative/wiki/Installation-Guidance)
 
 
 ## Resources
