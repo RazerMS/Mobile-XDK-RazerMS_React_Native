@@ -28,7 +28,7 @@ Razer Merchant Services React Native payment module that is ready to be implemen
 
 ## Installation Guidance
 
-[Installation](https://github.com/RazerMS/rms-mobile-xdk-reactnative/wiki/Installation-Guidance)
+[Installation](https://github.com/RazerMS/Mobile-XDK-RazerMS_React_Native/wiki/Installation-Guidance)
 
 
 ## Resources
